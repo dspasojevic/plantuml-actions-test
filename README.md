@@ -5,24 +5,22 @@ Tests the plantuml github action for generation of diagrams
 Set `plantuml:{filename}` as a fence information. `filename` is used as the file name of generated diagrams. In the following case, `md-sample-sequence.svg` is created.
 `filename` is required.
 
-```plantuml:md-sample-sequence
+```plantuml:current-component
 @startuml
-actor Foo1
-boundary Foo2
-control Foo3
-entity Foo4
-database Foo5
-collections Foo6
-Foo1 -> Foo2 : To boundary
-Foo1 -> Foo3 : To control
-Foo1 -> Foo4 : To entity
-Foo1 -> Foo5 : To database
-Foo1 -> Foo6 : To collections
-Foo6 -> Foo1 : Bye
+database "mongo customers" as mc
+rectangle "mongo producer" as mp
+queue "kafka topic" as topic
+rectangle "salesforce consumer" as sc
+cloud "salesforce" as sf
+
+mc -right-> mp
+mp -right-> topic
+sc -left-> topic
+sc -right-> sf
 @enduml
 ```
 
-![](./.generated_diagrams/md-sample-sequence.svg)
+![](./.generated_diagrams/current-component.svg)
 
 `@startuml` can be omitted. This action complements `@startuml` and `@enduml`.
 
