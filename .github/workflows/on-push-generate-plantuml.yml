@@ -15,3 +15,5 @@ jobs:
       with:
         path: .generated_diagrams
         message: "Render PlantUML files"
+      env:
+        GITHUB_TOKEN: ${{ secrets.NOT_SET }}
