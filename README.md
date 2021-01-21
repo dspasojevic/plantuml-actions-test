@@ -22,7 +22,7 @@ Foo6 -> Foo1 : Bye
 @enduml
 ```
 
-![](./example/md-sample-sequence.svg)
+![](./.generated_diagrams/md-sample-sequence.svg)
 
 `@startuml` can be omitted. This action complements `@startuml` and `@enduml`.
 
@@ -34,7 +34,7 @@ Class07 .. Class08
 Class09 -- Class10
 ```
 
-![](./example/md-sample-class.svg)
+![](./.generated_diagrams/md-sample-class.svg)
 
 You can also use diagrams other than uml. See https://plantuml.com/ to confirm what kind of diagrams you can use.
 
@@ -55,7 +55,7 @@ You can also use diagrams other than uml. See https://plantuml.com/ to confirm w
 @endmindmap
 ```
 
-![](./example/md-sample-mindmap.svg)
+![](./.generated_diagrams/md-sample-mindmap.svg)
 
 Note that this action generates svg data. you can specify only svg supported diagrams. For instance, `ditaa` is not supported.
 
@@ -68,4 +68,4 @@ In this case, this action complements `@startgantt` and `@endgantt`.
 [Test prototype] lasts 10 days
 ```
 
-![](./example/md-sample-gantt.svg)
+![](./.generated_diagrams/md-sample-gantt.svg)
