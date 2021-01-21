@@ -3,7 +3,7 @@
 database "mongo customers" as mc
 rectangle "mongo producer" as mp
 queue "kafka topic" as topic
-rectangle "salesforce consumer" as sc
+rectangle "salesforce consumer & transformer" as sc
 cloud "salesforce" as sf
 
 mc -right-> mp
